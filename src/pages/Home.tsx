@@ -1,6 +1,18 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGasPump } from "@fortawesome/free-solid-svg-icons";
+
 export const Home = () => {
   return (
     <section className="flex flex-1 flex-col justify-center bg-gray-50 dark:bg-gray-900">
+      <div className="flex justify-center">
+        <span className="rounded-full bg-blue-100 p-13 text-blue-600 dark:bg-[#4b71b126] dark:text-blue-400 shadow-md shadow-[#0000006e] border-1 border-[#4cb9f01f]">
+          <FontAwesomeIcon
+            icon={faGasPump}
+            size="5x"
+            color="var(--color-blue-100)"
+          />
+        </span>
+      </div>
       <div className="p-8 md:p-12 lg:px-16 lg:py-24">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="text-2xl font-bold text-gray-900 md:text-3xl dark:text-white">
