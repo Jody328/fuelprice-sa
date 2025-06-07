@@ -1,44 +1,23 @@
 export const Footer = () => {
   return (
-    <footer className="flex-[0.2] bg-white dark:bg-gray-900">
+    <footer className="flex-[0.2] bg-gray-900">
       <div className="mx-auto max-w-screen-xl px-4 pb-8 sm:px-6 lg:px-8 lg:pt-24">
-        <div className="mt-16 border-t border-gray-100 pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24 dark:border-gray-800">
+        <div className="mt-16 border-t pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24 border-gray-800">
           <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
             <li>
-              <a
-                href="#"
-                className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
-              >
-                Terms & Conditions
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="#"
-                className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
-              >
-                Privacy Policy
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="#"
-                className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
-              >
-                Cookies
+              <a href="#" className="transition hover:opacity-75 text-gray-400">
+                Buy me a coffee
               </a>
             </li>
           </ul>
 
-          <ul className="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
+          {/* <ul className="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
             <li>
               <a
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                className="transition hover:opacity-75 text-gray-200"
               >
                 <span className="sr-only">Facebook</span>
 
@@ -62,7 +41,7 @@ export const Footer = () => {
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                className="transition hover:opacity-75 text-gray-200"
               >
                 <span className="sr-only">Instagram</span>
 
@@ -86,7 +65,7 @@ export const Footer = () => {
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                className="transition hover:opacity-75 text-gray-200"
               >
                 <span className="sr-only">Twitter</span>
 
@@ -106,7 +85,7 @@ export const Footer = () => {
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                className="transition hover:opacity-75 text-gray-200"
               >
                 <span className="sr-only">GitHub</span>
 
@@ -130,7 +109,7 @@ export const Footer = () => {
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                className="transition hover:opacity-75 text-gray-200"
               >
                 <span className="sr-only">Dribbble</span>
 
@@ -149,6 +128,7 @@ export const Footer = () => {
               </a>
             </li>
           </ul>
+        </div> */}
         </div>
       </div>
     </footer>

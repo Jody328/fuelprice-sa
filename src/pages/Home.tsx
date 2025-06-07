@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGasPump } from "@fortawesome/free-solid-svg-icons";
+import { Footer } from "../components/Footer";
 
 export const Home = () => {
   return (
@@ -22,56 +23,69 @@ export const Home = () => {
 
         <div className="mx-auto mt-8 max-w-xl">
           <div className="flex flex-1 justify-center space-x-5">
-            {/* Latest Prices Section */}
-            <div className="bg-radial-[at_25%_25%] from-[#398ab32d] to-[#16212e] to-55% border-1 border-[#4cb9f01f] rounded-xl p-4 flex justify-between space-x-2 items-center mb-6 shadow-lg shadow-[#04040469]">
-              <div className="text-left pr-2">
-                <div className="text-3xl font-bold text-white">R 20.41</div>
-                <div className="text-[#9fc7f9c2] mt-1 text-sm">
-                  Petrol Unleaded 95
+            <div className="flex-1 bg-radial-[at_25%_25%] from-[#398ab32d] to-[#16212e] to-55% border-1 border-[#4cb9f01f] rounded-xl p-4 flex justify-center mb-6 shadow-lg shadow-[#04040469]">
+              <div className="flex-1 flex flex-col text-left justify-center">
+                <div className="flex-1.5 text-[#9fc7f9c2] text-md">
+                  Unleaded 95
+                </div>
+                <div className="flex-1 flex flex-row items-baseline">
+                  <div className="flex-1 text-4xl font-bold text-white">
+                    R 20.41
+                  </div>
+                  <div className="flex-1.5 inline-flex gap-2 rounded-sm p-1 bg-green-700 text-green-50">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="size-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"
+                      />
+                    </svg>
+                    <span className="text-xs font-medium"> 67.81% </span>
+                  </div>
                 </div>
               </div>
 
-              <div className="w-[0.5px] shadow-lg shadow-black bg-[#3c567338] border-l-[0.5px] border-[#10101000] h-15"></div>
+              <div className="flex-0.5 px-3">
+                <div className="w-[0.5px] shadow-lg shadow-black bg-[#3c567338] border-l-[0.5px] border-[#10101000] h-18"></div>
+              </div>
 
-              <div className="text-left pl-2">
-                <div className="text-3xl font-bold text-white">R 17.81</div>
-                <div className="text-[#9fc7f9c2] mt-1 text-sm">Diesel</div>
+              <div className="flex-1 flex flex-col text-left justify-center">
+                <div className="flex-1.5 text-[#9fc7f9c2] text-md">Diesel</div>
+                <div className="flex-1 flex flex-row items-baseline">
+                  <div className="flex-1 text-4xl font-bold text-white">
+                    R 17.81
+                  </div>
+                  <div className="flex-1.5 inline-flex gap-2 rounded-sm  p-1 bg-red-700 text-red-50">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="size-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                      />
+                    </svg>
+                    <span className="text-xs font-medium"> 67.81% </span>
+                  </div>
+                </div>
               </div>
             </div>
-            {/* <article className="flex items-center gap-4 rounded-lg border border-gray-100 bg-white p-6 dark:border-gray-800 dark:bg-gray-900">
-              <span className="rounded-full bg-blue-100 p-3 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400">
-                <FontAwesomeIcon icon={faGasPump} size="2x" />
-              </span>
-
-              <div>
-                <p className="text-2xl font-medium text-gray-900 dark:text-white">
-                  $240.94
-                </p>
-
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Unleaded 95
-                </p>
-              </div>
-            </article>
-
-            <article className="flex items-center gap-4 rounded-lg border border-gray-100 bg-white p-6 dark:border-gray-800 dark:bg-gray-900">
-              <span className="rounded-full bg-blue-100 p-3 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400">
-                <FontAwesomeIcon icon={faGasPump} size="2x" />
-              </span>
-
-              <div>
-                <p className="text-2xl font-medium text-gray-900 dark:text-white">
-                  $240.94
-                </p>
-
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Diesel
-                </p>
-              </div>
-            </article> */}
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   );
 };

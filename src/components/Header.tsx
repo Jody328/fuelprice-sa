@@ -1,15 +1,21 @@
+import { faLeaf } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export const Header = () => {
   return (
     <header className="bg-white dark:bg-[#111722] flex-[0.05] border-b-1 border-[#0a0d1099] drop-shadow-md">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center justify-items-start space-x-2">
+          <div>
+            <FontAwesomeIcon icon={faLeaf} color="white" size={"sm"} />
+          </div>
           <div className="md:flex md:items-top md:gap-12">
-            <h2 className="font-bold text-gray-900  dark:text-white">
+            <h2 className="font-bold text-gray-900  dark:text-white text-[18px]">
               FuelPrice SA
             </h2>
           </div>
 
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <nav aria-label="Global">
               <ul className="flex items-center gap-6 text-sm">
                 <li>
@@ -106,7 +112,7 @@ export const Header = () => {
                 </svg>
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
