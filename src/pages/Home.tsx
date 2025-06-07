@@ -3,8 +3,8 @@ import { faGasPump } from "@fortawesome/free-solid-svg-icons";
 
 export const Home = () => {
   return (
-    <section className="flex flex-1 flex-col justify-center bg-gray-50 dark:bg-gray-900">
-      <div className="flex justify-center mt-10">
+    <section className="flex flex-1 flex-col justify-center bg-gray-50 dark:bg-gray-900 overflow-y-auto">
+      <div className="flex justify-center max-[700px]:pt-20">
         <span className="rounded-full bg-blue-100 p-13 text-blue-600 dark:bg-[#4b71b126] dark:text-blue-400 shadow-md shadow-[#0000006e] border-1 border-[#4cb9f01f]">
           <FontAwesomeIcon
             icon={faGasPump}
