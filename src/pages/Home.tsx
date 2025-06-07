@@ -1,6 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGasPump } from "@fortawesome/free-solid-svg-icons";
-
 export const Home = () => {
   return (
     <section className="flex flex-1 flex-col justify-center bg-gray-50 dark:bg-gray-900">
