@@ -25,11 +25,11 @@ export const Home = () => {
           <div className="flex flex-1 justify-center space-x-5">
             <div className="flex-1 bg-radial-[at_25%_25%] from-[#398ab32d] to-[#16212e] to-55% border-1 border-[#4cb9f01f] rounded-xl p-4 flex justify-center mb-6 shadow-lg shadow-[#04040469]">
               <div className="flex-1 flex flex-col text-left justify-center">
-                <div className="flex-1.5 text-[#9fc7f9c2] text-md">
+                <div className="flex-1.5 text-[#9fc7f9c2] max-[430px]:text-[12px] text-md">
                   Unleaded 95
                 </div>
-                <div className="flex-1 flex flex-row items-baseline">
-                  <div className="flex-1 text-4xl font-bold text-white">
+                <div className="flex-1 flex flex-row max-[450px]:flex-col items-baseline max-[450px]:items-start">
+                  <div className="max-[450px]:flex-0 flex-1 max-[450px]:text-3xl text-4xl max-[450px]:pb-2 font-bold text-[var(--color-blue-100)]">
                     R 20.41
                   </div>
                   <div className="flex-1.5 inline-flex gap-2 rounded-sm p-1 bg-green-700 text-green-50">
@@ -57,9 +57,11 @@ export const Home = () => {
               </div>
 
               <div className="flex-1 flex flex-col text-left justify-center">
-                <div className="flex-1.5 text-[#9fc7f9c2] text-md">Diesel</div>
-                <div className="flex-1 flex flex-row items-baseline">
-                  <div className="flex-1 text-4xl font-bold text-white">
+                <div className="flex-1.5 text-[#9fc7f9c2] max-[430px]:text-[12px] text-md">
+                  Diesel
+                </div>
+                <div className="flex-1 flex flex-row max-[450px]:flex-col items-baseline max-[450px]:items-start">
+                  <div className="max-[450px]:flex-0 flex-1 max-[450px]:text-3xl text-4xl max-[450px]:pb-2 font-bold text-[var(--color-blue-100)]">
                     R 17.81
                   </div>
                   <div className="flex-1.5 inline-flex gap-2 rounded-sm  p-1 bg-red-700 text-red-50">
