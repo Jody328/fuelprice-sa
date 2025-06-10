@@ -1,8 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGasPump } from "@fortawesome/free-solid-svg-icons";
 import { Footer } from "../components/Footer";
+import { useFuelPriceChanges } from "../hooks/useFuelPrices";
 
 export const Home = () => {
+  const { data, loading, error } = useFuelPriceChanges();
+
+  if (loading) return <p>Loading fuel prices...</p>;
+  if (error) return <p>Error: {error}</p>;
+
   return (
     <section className="flex flex-1 flex-col justify-center bg-gray-50 dark:bg-gray-900 overflow-y-auto">
       <div className="flex justify-center max-[700px]:pt-20">
