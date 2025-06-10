@@ -10,6 +10,9 @@ export interface FuelPrice {
 }
 
 export interface FuelPriceChange {
+  latest_date: any;
+  previous_date: any;
+  has_changed: any;
   fuel_type: string;
   region: string;
   latest_price: number;
