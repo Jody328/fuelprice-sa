@@ -4,11 +4,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
 
-// Define common fuel types
 const COMMON_FUEL_TYPES = ["ULP 95", "Diesel 50", "ULP 93"] as const;
 type CommonFuel = (typeof COMMON_FUEL_TYPES)[number];
 
-// Group array into chunks for layout
 function chunkArray<T>(arr: T[], size: number): T[][] {
   const chunks: T[][] = [];
   for (let i = 0; i < arr.length; i += size) {
@@ -27,7 +25,6 @@ export const Home = () => {
     return <p className="text-center text-white">Loading fuel prices...</p>;
   if (error) return <p className="text-center text-red-500">Error: {error}</p>;
 
-  // Separate data into common and other fuel types
   const filtered = data?.filter((d) => d.region === regionFilter) || [];
   const common = COMMON_FUEL_TYPES.map((type) =>
     filtered.find((d) => d.fuel_type === type)
@@ -92,7 +89,7 @@ export const Home = () => {
                         </div>
                         <div
                           className={`inline-flex items-center space-x-1 py-1 px-2 rounded-sm text-xs font-medium ${
-                            Math.trunc(item.change_percentage) == 0
+                            item.change_percentage == +(0).toFixed(2)
                               ? "bg-indigo-600 text-white"
                               : item.change_percentage > 0
                               ? "bg-green-600 text-white"
