@@ -51,8 +51,8 @@ export const Home = () => {
         )}
 
         <div className="flex flex-col bg-radial-[at_25%_25%] from-[#18243b71] to-[#101828] to-85% border-1 border-[#19263f5b] rounded-4xl shadow-lg p-2 justify-center">
-          <div className="flex lg:flex-row max-[600px]:flex-col max-[600px]:justify-center">
-            <h1 className="text-3xl font-bold text-[var(--color-blue-100)] lg:pl-5 mt-2 lg:flex-[1.2] max-[600px]:ml-4">
+          <div className="flex lg:flex-row max-[600px]:flex-col max-[600px]:justify-center max-[600px]:text-center">
+            <h1 className="text-3xl font-bold text-[var(--color-blue-100)] lg:pl-5 mt-2 lg:flex-[1.2] max-[600px]:text-center">
               Fuel Prices
             </h1>
             <div className="flex justify-center my-2 mr-5 sm:mx-3">
