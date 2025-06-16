@@ -55,7 +55,7 @@ export const Home = () => {
             <h1 className="text-3xl font-bold text-[var(--color-blue-100)] lg:pl-5 mt-2 lg:flex-[1.2] max-[600px]:text-center">
               Fuel Prices
             </h1>
-            <div className="flex justify-center my-2 mr-5 sm:mx-3">
+            <div className="flex justify-center my-2 min-[601px]:mr-5 sm:mx-3">
               <div className="flex gap-2 rounded-full bg-[#2a2f3a] p-1">
                 {["coastal", "inland"].map((type) => (
                   <button
