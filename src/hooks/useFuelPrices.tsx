@@ -10,14 +10,14 @@ export interface FuelPrice {
 }
 
 export interface FuelPriceChange {
-  latest_date: any;
-  previous_date: any;
-  has_changed: any;
+  id: string;
   fuel_type: string;
-  region: string;
-  latest_price: number;
-  previous_price: number;
-  change_percentage: number;
+  region: "inland" | "coastal";
+  current_price: string; // price stored as string (e.g. "21.35")
+  created_at: string; // ISO timestamp (e.g. "2025-06-11T21:27:12.218869+00:00")
+  last_changed_price: string;
+  last_change_date: string;
+  price_difference: string;
 }
 
 export function useFuelPrices() {
@@ -61,7 +61,7 @@ export function useFuelPriceChanges() {
       setError(null);
 
       const { data, error } = await supabase
-        .from("fuel_price_changes")
+        .from("latest_fuel_prices_view")
         .select("*")
         .order("fuel_type", { ascending: true });
 
