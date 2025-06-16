@@ -43,20 +43,20 @@ export const Home = () => {
   const combined = [...common, ...others];
 
   return (
-    <section className="flex flex-1 flex-col items-center bg-gray-50 dark:bg-gray-900 overflow-y-auto">
-      <div className="sm:w-full max-w-xl p-4 lg:p-8 lg:min-w-[30%]">
+    <section className="flex flex-1 flex-col items-center bg-gray-900 overflow-y-auto">
+      <div className="sm:w-full max-w-xl p-4 lg:p-8 lg:min-w-[30%] max-[600px]:min-w-[90%]">
         {combined.length === 0 && (
-          <p className="text-center text-gray-500 dark:text-gray-400">
+          <p className="text-center text-gray-400">
             No fuel data available for {regionFilter}
           </p>
         )}
 
         <div className="flex flex-col bg-radial-[at_25%_25%] from-[#18243b71] to-[#101828] to-85% border-1 border-[#19263f5b] rounded-4xl shadow-lg p-2 justify-center">
-          <div className="flex flex-row">
-            <h1 className="text-3xl font-bold text-[var(--color-blue-100)] pl-5 mt-2 flex-[1.2]">
+          <div className="flex lg:flex-row max-[600px]:flex-col max-[600px]:justify-center">
+            <h1 className="text-3xl font-bold text-[var(--color-blue-100)] lg:pl-5 mt-2 lg:flex-[1.2] max-[600px]:ml-4">
               Fuel Prices
             </h1>
-            <div className="flex justify-center my-2 mr-5">
+            <div className="flex justify-center my-2 mr-5 sm:mx-3">
               <div className="flex gap-2 rounded-full bg-[#2a2f3a] p-1">
                 {["coastal", "inland"].map((type) => (
                   <button
