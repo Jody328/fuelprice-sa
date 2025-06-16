@@ -3,7 +3,6 @@ import { Footer } from "../components/Footer";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import FuelCard from "../components/FuelCard";
 
 const COMMON_FUEL_TYPES = ["ULP 95", "Diesel 50", "ULP 93"] as const;
 type CommonFuel = (typeof COMMON_FUEL_TYPES)[number];
