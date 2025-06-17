@@ -71,7 +71,7 @@ export default function FuelCard({
             Last change: {formatDate(lastChange)}
           </div>
         </div>
-        <div className="flex text-center text-white border-r-1 border-[#9fc7f9c2] opacity-10">
+        <div className="flex text-center text-white border-r-1 border-[#9fc7f9c2] opacity-10 max-[700px]:ml-2">
           <span className="content-center justify-center opacity-0">|</span>
         </div>
         <div className="flex flex-1 flex-col justify-start">
