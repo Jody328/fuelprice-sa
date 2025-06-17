@@ -45,7 +45,7 @@ export const Home = () => {
         )}
 
         <div className="flex flex-col bg-radial-[at_25%_25%] from-[#18243b71] to-[#101828] to-55% border-1 border-[#273c635b] rounded-4xl p-2 justify-center max-[700px]:mt-8 mt-10">
-          <div className="flex flex-row justify-center">
+          <div className="flex flex-row justify-center mt-2">
             <h1 className="flex-1 pl-4 max-[700px]:pl-3 text-3xl font-bold text-[var(--color-blue-100)] lg:pl-5 mt-2 lg:flex-[1.2] max-[700px]:text-[1.2rem]">
               Latest Prices
             </h1>
