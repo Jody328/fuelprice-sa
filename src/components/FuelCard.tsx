@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowTrendUp,
+  faChevronDown,
+  faGasPump,
+} from "@fortawesome/free-solid-svg-icons";
 
 type FuelCardProps = {
   fuelType: string;
@@ -46,58 +52,43 @@ export default function FuelCard({
   return (
     <motion.div
       key={`${fuelType}`}
-      className="sm:basis-1/2 sm:max-w-[50%] w-full bg-linear-to-br from-[#1f2f4d71] to-[#121b2c] to-60% border-1 border-[#273c635b] rounded-xl shadow-sm p-6 hover:shadow-sm"
+      className="sm:basis-1/2 sm:max-w-[50%] w-full bg-linear-to-br from-[#1f2f4d71] to-[#121b2c] to-60%  rounded-xl shadow-sm p-6 hover:shadow-sm"
       whileHover={{ y: -5 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
     >
-      <div className="text-[#9fc7f9c2] uppercase tracking-wide text-sm mb-2">
-        {fuelType}
-      </div>
-      <div className="text-3xl font-bold text-[var(--color-blue-100)]">
-        R {Number(displayPrice).toFixed(2)}
-      </div>
-      <div className="flex flex-row items-end">
-        <div className="flex-[1.2] text-xs text-gray-400">
-          Last change: {formatDate(lastChange)}
+      <div className="flex flex-row">
+        <div className="flex-1">
+          <div className="text-[#9fc7f9c2] uppercase tracking-wide text-sm mb-2">
+            <FontAwesomeIcon icon={faGasPump} className="mr-1.5" />
+            {fuelType}
+          </div>
+          <div className="text-3xl font-bold text-[var(--color-blue-100)]">
+            R {Number(displayPrice).toFixed(2)}
+          </div>
+          <div className="text-xs text-gray-400 mt-2">
+            Last change: {formatDate(lastChange)}
+          </div>
         </div>
-        <div
-          className={`inline-flex items-center space-x-1 py-1 px-2 rounded-sm text-xs font-medium ${
-            !priceDifference
-              ? "bg-green-600 text-white"
-              : priceDifference != "0.00"
-              ? "bg-red-600 text-white"
-              : "bg-green-600 text-white"
-          }`}
-        >
-          {!priceDifference || priceDifference == "0.00" ? (
-            <span className="font-bold text-[8px]">—</span>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d={
-                  priceDifference && priceDifference != "0.00"
-                    ? "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                    : "M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"
-                }
-              />
-            </svg>
-          )}
-          <span>
-            {priceDifference && priceDifference != "0.00"
-              ? `${priceDifference}`
-              : "0.00"}
-          </span>
+        <div className="flex text-center text-white border-r-1 border-[#9fc7f9c2] opacity-10">
+          <span className="content-center justify-center opacity-0">|</span>
+        </div>
+        <div className="flex flex-1 flex-col justify-start">
+          <div className="flex-1 text-[#9fc7f9c2] uppercase text-center tracking-wide text-sm">
+            <FontAwesomeIcon icon={faArrowTrendUp} className="mr-1.5" />
+            Trend
+          </div>
+          <div className="flex flex-1 justify-center text-green-600">
+            <FontAwesomeIcon icon={faChevronDown} size="3x" className="p-0" />
+          </div>
+          <div className="text-center">
+            <span className="text-gray-300 font-medium text-xs mr-2">
+              {priceDifference && priceDifference != "0.00"
+                ? `${priceDifference}`
+                : "- 0.00"}
+            </span>
+          </div>
         </div>
       </div>
     </motion.div>
