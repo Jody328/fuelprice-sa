@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowTrendUp,
   faChevronDown,
+  faChevronUp,
   faGasPump,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -79,9 +80,18 @@ export default function FuelCard({
             <FontAwesomeIcon icon={faArrowTrendUp} className="mr-1.5" />
             Trend
           </div>
-          <div className="flex flex-1 justify-center text-green-600 ml-4">
-            <FontAwesomeIcon icon={faChevronDown} size="3x" className="p-0" />
-          </div>
+          {(priceDifference &&
+            priceDifference != "0.00" &&
+            Number(priceDifference).toFixed(2) < (0).toFixed(2)) ||
+          priceDifference == null ? (
+            <div className="flex flex-1 justify-center text-green-600 ml-4">
+              <FontAwesomeIcon icon={faChevronDown} size="3x" className="p-0" />
+            </div>
+          ) : (
+            <div className="flex flex-1 justify-center text-red-800 ml-4">
+              <FontAwesomeIcon icon={faChevronUp} size="3x" className="p-0" />
+            </div>
+          )}
           <div className="text-center ml-3">
             <span className="text-gray-300 font-medium text-xs ">
               {priceDifference && priceDifference != "0.00"
