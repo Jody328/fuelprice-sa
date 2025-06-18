@@ -75,18 +75,18 @@ export default function FuelCard({
           <span className="content-center justify-center opacity-0">|</span>
         </div>
         <div className="flex flex-1 flex-col justify-start">
-          <div className="flex-1 text-[#9fc7f9c2] uppercase text-center tracking-wide text-sm">
+          <div className="flex-1 text-[#9fc7f9c2] uppercase text-center tracking-wide text-sm ml-5">
             <FontAwesomeIcon icon={faArrowTrendUp} className="mr-1.5" />
             Trend
           </div>
-          <div className="flex flex-1 justify-center text-green-600">
+          <div className="flex flex-1 justify-center text-green-600 ml-4">
             <FontAwesomeIcon icon={faChevronDown} size="3x" className="p-0" />
           </div>
-          <div className="text-center">
-            <span className="text-gray-300 font-medium text-xs mr-2">
+          <div className="text-center ml-3">
+            <span className="text-gray-300 font-medium text-xs ">
               {priceDifference && priceDifference != "0.00"
                 ? `${priceDifference}`
-                : "- 0.00"}
+                : "-0.00"}
             </span>
           </div>
         </div>

@@ -37,16 +37,16 @@ export const Home = () => {
 
   return (
     <section className="flex flex-1 flex-col items-center bg-gray-900 overflow-y-auto">
-      <div className="sm:w-full max-w-xl p-4 lg:p-8 lg:min-w-[30%] max-[600px]:min-w-[90%]">
+      <div className="sm:w-full p-4 lg:p-8 min-[1300px]:max-w-[35%] max-[1290px]:min-w-[95%]">
         {combined.length === 0 && (
           <p className="text-center text-gray-400">
             No fuel data available for {regionFilter}
           </p>
         )}
 
-        <div className="flex flex-col bg-radial-[at_25%_25%] from-[#18243b71] to-[#101828] to-55% border-1 border-[#273c635b] rounded-4xl p-2 justify-center max-[700px]:mt-8 mt-10">
-          <div className="flex flex-row justify-center mt-2">
-            <h1 className="flex-1 pl-4 max-[700px]:pl-3 text-3xl font-bold text-[var(--color-blue-100)] lg:pl-5 mt-2 lg:flex-[1.2] max-[700px]:text-[1.2rem]">
+        <div className="flex flex-col bg-radial-[at_25%_25%] from-[#18243b71] to-[#101828] to-55% border-1 border-[#273c635b] rounded-4xl p-2 justify-center max-[700px]:mt-8 mt-10 bg-opacity-10 bg-transparent">
+          <div className="flex flex-row justify-center mt-2 items-start">
+            <h1 className="flex-1 pl-4 max-[700px]:pl-3 text-3xl font-bold text-[var(--color-blue-100)] lg:pl-5 mt-2 lg:flex-[1.2] max-[700px]:text-[1.7rem] max-[420px]:text-[1.4rem] max-[420px]:pt-1 text-nowrap">
               Latest Prices
             </h1>
             <div className="flex flex-1 justify-end my-2 min-[701px]:mr-5 sm:mx-3 pr-3">
@@ -58,7 +58,7 @@ export const Home = () => {
                       setRegionFilter(type as "coastal" | "inland")
                     }
                     className={clsx(
-                      "px-4 max-[700px]:px-2 py-1 max-[700px]:py-0.5 rounded-full text-sm font-medium transition-all max-[700px]:text-[0.65rem]",
+                      "px-4 max-[700px]:px-2 py-1 max-[700px]:py-1.2 max-[420px]:py-1 rounded-full text-sm font-medium transition-all max-[700px]:text-[0.95rem] max-[420px]:text-[0.8rem]",
                       regionFilter === type
                         ? "bg-blue-500 text-white"
                         : "text-gray-400 hover:bg-[#3a3f4a]"
