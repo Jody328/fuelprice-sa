@@ -3,6 +3,7 @@ import { Footer } from "../components/Footer";
 import { useState } from "react";
 import clsx from "clsx";
 import FuelCard from "../components/FuelCard";
+import Loading from "../components/Loading";
 
 const COMMON_FUEL_TYPES = ["ULP 95", "Diesel 50", "ULP 93"] as const;
 type CommonFuel = (typeof COMMON_FUEL_TYPES)[number];
@@ -21,8 +22,7 @@ export const Home = () => {
     "coastal"
   );
 
-  if (loading)
-    return <p className="text-center text-white">Loading fuel prices...</p>;
+  if (loading) return <Loading />;
   if (error) return <p className="text-center text-red-500">Error: {error}</p>;
 
   const filtered = data?.filter((d) => d.region === regionFilter) || [];
@@ -44,7 +44,7 @@ export const Home = () => {
           </p>
         )}
 
-        <div className="flex flex-col bg-radial-[at_25%_25%] from-[#18243b71] to-[#101828] to-55% border-1 border-[#273c635b] rounded-4xl p-2 justify-center max-[700px]:mt-8 mt-10 bg-opacity-10 bg-transparent">
+        <div className="flex flex-col bg-radial-[at_25%_25%] from-[#18243b71] to-[#101828] to-55% border-1 border-[#273c635b] rounded-4xl p-2 justify-center max-[700px]:mt-8 mt-10">
           <div className="flex flex-row justify-center mt-2 items-start">
             <h1 className="flex-1 pl-4 max-[700px]:pl-3 text-3xl font-bold text-[var(--color-blue-100)] lg:pl-5 mt-2 lg:flex-[1.2] max-[700px]:text-[1.7rem] max-[420px]:text-[1.4rem] max-[420px]:pt-1 text-nowrap">
               Latest Prices
