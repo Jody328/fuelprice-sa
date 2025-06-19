@@ -43,7 +43,7 @@ export default function DisclaimerModal() {
         {isOpen && (
           <>
             <motion.div
-              className="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm"
+              className="fixed inset-0 z-40 bg-black/20 backdrop-blur-md backdrop-saturate-150"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -82,12 +82,14 @@ export default function DisclaimerModal() {
                     the information provided.
                   </p>
                 </div>
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="mt-5 px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-500 transition-colors"
-                >
-                  Close
-                </button>
+                <div className="mt-5 flex justify-end">
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-500 transition-colors"
+                  >
+                    Got it!
+                  </button>
+                </div>
               </div>
             </motion.div>
           </>
