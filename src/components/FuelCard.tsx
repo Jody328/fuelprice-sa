@@ -18,7 +18,7 @@ type FuelCardProps = {
 const formatDate = (isoString: string | null): string => {
   if (!isoString) return "N/A";
   const date = new Date(isoString);
-  return date.toISOString().split("T")[0]; // "YYYY-MM-DD"
+  return date.toISOString().split("T")[0];
 };
 
 export default function FuelCard({
@@ -43,7 +43,7 @@ export default function FuelCard({
 
       if (frame >= totalFrames) {
         clearInterval(interval);
-        setDisplayPrice(price); // Snap to actual at end
+        setDisplayPrice(price);
       }
     }, 1000 / frameRate);
 

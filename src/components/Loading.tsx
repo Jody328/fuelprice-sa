@@ -1,4 +1,4 @@
-export default function Loading() {
+export const Loading = () => {
   return (
     <div className="flex flex-1 flex-col items-center bg-gray-900 overflow-y-auto pb-8 max-[420px]:px-5">
       <div
@@ -58,4 +58,4 @@ export default function Loading() {
       </div>
     </div>
   );
-}
+};

@@ -1,39 +1,16 @@
-import { useFuelPriceChanges } from "../hooks/useFuelPrices";
 import { Footer } from "../components/Footer";
-import { useState } from "react";
 import clsx from "clsx";
 import FuelCard from "../components/FuelCard";
-import Loading from "../components/Loading";
-
-const COMMON_FUEL_TYPES = ["ULP 95", "Diesel 50", "ULP 93"] as const;
-type CommonFuel = (typeof COMMON_FUEL_TYPES)[number];
-
-function chunkArray<T>(arr: T[], size: number): T[][] {
-  const chunks: T[][] = [];
-  for (let i = 0; i < arr.length; i += size) {
-    chunks.push(arr.slice(i, i + size));
-  }
-  return chunks;
-}
+import { Loading } from "../components/Loading";
+import { chunkArray } from "../utilities/utils";
+import { useFilteredFuelPrices } from "../hooks/useFilteredFuelPrices";
 
 export const Home = () => {
-  const { data, loading, error } = useFuelPriceChanges();
-  const [regionFilter, setRegionFilter] = useState<"coastal" | "inland">(
-    "coastal"
-  );
+  const { loading, error, regionFilter, setRegionFilter, combined } =
+    useFilteredFuelPrices();
 
   if (loading) return <Loading />;
   if (error) return <p className="text-center text-red-500">Error: {error}</p>;
-
-  const filtered = data?.filter((d) => d.region === regionFilter) || [];
-  const common = COMMON_FUEL_TYPES.map((type) =>
-    filtered.find((d) => d.fuel_type === type)
-  ).filter(Boolean);
-  const others = filtered
-    .filter((d) => !COMMON_FUEL_TYPES.includes(d.fuel_type as CommonFuel))
-    .sort((a, b) => a.fuel_type.localeCompare(b.fuel_type));
-
-  const combined = [...common, ...others];
 
   return (
     <section className="flex flex-1 flex-col items-center bg-gray-900 overflow-y-auto">
@@ -96,7 +73,6 @@ export const Home = () => {
           </div>
         </div>
       </div>
-
       <Footer />
     </section>
   );
