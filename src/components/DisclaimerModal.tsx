@@ -33,7 +33,7 @@ export default function DisclaimerModal() {
       <p className="text-sm text-center text-gray-400">
         <button
           onClick={() => setIsOpen(true)}
-          className="hover:underline hover:text-blue-400 transition-colors text-xs"
+          className="hover:text-blue-400 transition-colors text-xs"
         >
           Disclaimer
         </button>
@@ -43,7 +43,7 @@ export default function DisclaimerModal() {
         {isOpen && (
           <>
             <motion.div
-              className="fixed inset-0 z-40 bg-black/20 backdrop-blur-md backdrop-saturate-150"
+              className="fixed inset-0 z-40 bg-black/50 backdrop-blur-md backdrop-saturate-150"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -57,10 +57,10 @@ export default function DisclaimerModal() {
             >
               <div
                 ref={modalRef}
-                className="bg-gray-900 text-gray-100 rounded-xl shadow-2xl max-w-lg w-full p-6"
+                className="bg-gray-900 text-white rounded-xl shadow-2xl max-w-lg w-full p-6"
               >
                 <h2 className="text-lg font-semibold mb-3">Disclaimer</h2>
-                <div className="text-sm text-gray-300 space-y-3 leading-relaxed max-h-[70vh] overflow-y-auto">
+                <div className="text-sm text-white space-y-3 leading-relaxed max-h-[70vh] overflow-y-auto">
                   <p>
                     <strong>FuelPrice SA</strong> provides fuel price
                     information for general informational purposes only. While
@@ -82,10 +82,10 @@ export default function DisclaimerModal() {
                     the information provided.
                   </p>
                 </div>
-                <div className="mt-5 flex justify-end">
+                <div className="mt-5 flex justify-center">
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-500 transition-colors"
+                    className="px-6 py-2 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-500 transition-colors"
                   >
                     Got it!
                   </button>
