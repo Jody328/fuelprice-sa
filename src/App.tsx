@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router";
 import "./App.css";
-import { Home } from "./pages/home";
 import { Header } from "./components/Header";
+import { Home } from "./pages/Home";
 
-function App() {
+const App = () => {
   return (
     <main className="flex flex-col overflow-hidden text-tertiary bg-gray-900 h-[100vh]">
       <Header />
@@ -12,6 +12,6 @@ function App() {
       </Routes>
     </main>
   );
-}
+};
 
 export default App;
