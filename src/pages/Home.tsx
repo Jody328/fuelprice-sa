@@ -14,7 +14,7 @@ export const Home = () => {
 
   return (
     <section className="flex flex-1 flex-col items-center bg-gray-900 overflow-y-auto">
-      <div className="sm:w-full p-4 lg:p-8 min-[1300px]:max-w-[35%] max-[1290px]:min-w-[95%]">
+      <div className="p-4 lg:p-8 min-[1300px]:min-w-[45%] max-[1290px]:min-w-[95%]">
         {combined.length === 0 && (
           <p className="text-center text-gray-400">
             No fuel data available for {regionFilter}
